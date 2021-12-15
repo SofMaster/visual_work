@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step01_DataType5.html</title>
+</head>
+<body>
+    <script>
+        move();
+        send();
+        
+        //function type
+
+        //move 라는 이름의 함수 생성
+        /*
+            함수를 아래와 같은 형식으로 만들면 실행순서가 왔을때 최우선적으로 함수가 만들어지고 나서
+            javascript 가 위에서 부터 실행된다.
+        */
+        function move(){
+            alert("move() 함수가 호출되었습니다.:");
+        };
+
+        //이름이 없는 함수를 만들어서 send 라는 변수에 대입하기
+        //(send 라는 이름의 함수를 만든것과 같은효과)
+        let send = function(){
+            alert("send() 함수가 호출되었습니다.");
+        };
+        
+    </script>
+</body>
+</html>
