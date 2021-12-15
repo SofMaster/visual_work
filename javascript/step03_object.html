@@ -16,11 +16,26 @@
 
         //위의 버튼을 눌렀을때 아래의 두줄이 실행되도록 해보세요.
         function step(){
+            // 특정 key값으로 저장된 값을 수정하기
             mem1.num=7;
             mem1.name="배동현";
             mem1.addr="인천광역시";
-            document.querySelector("body");
+            //만일 존재하지 않는 key값이면 추가된다.
+            mem1.isMan="true";
+
+            //deleate를 사용하면 특정 값을 삭제할 수 있다.
+            delete mem1.num;
+            
+            //빈 object를 만들고
+            let mem2={};
+            //나중에 key 값을 하나씩 추가 할수 있다.
+            mem2.num=2;
+            mem2.name="해골";
+            mem2.addr="행신동}";
         };
+
+
+        
     </script>
 </body>
 </html>
