@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step04_example.html</title>
+</head>
+<body>
+    <button onclick="print()">출력하기</button>
+    <script>
+        let members=[
+            {num:1, name:"김구라", addr:"노량진"},
+            {num:2, name:"해골", addr:"행신동"},
+            {num:3, name:"원숭이", addr:"상도동"}
+        ];
+        //상품목룍, 음식 목록, 화장품 목록, 환자 목록, ...
+        let a=members;          //array
+        let b=members[0];       //object
+        let c=members[0].num;   //number 1
+        let d=members[0].name;  //string "김구라"
+        let e=members[0].addr;  //string "노량진"
+
+        let f=members[1].name; //string "해골"
+
+        //콘솔창에 모든 회원의 주소를 순서대로 출력해 보세요.
+        let g=members[0].addr;
+        let h=members[1].addr;
+        let i=members[2].addr;
+        console.log(g,h,i);
+
+        console.log(
+            members[0].addr,
+            members[1].addr,
+            members[2].addr
+        );
+
+        let print=function(){
+            console.log(
+            members[0].addr,
+            members[1].addr,
+            members[2].addr
+            );
+        }
+    </script>
+</body>
+</html>
