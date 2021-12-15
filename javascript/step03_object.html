@@ -1,0 +1,26 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_object.html</title>
+</head>
+<body>
+    <button onclick="step()">수정하기</button>
+    <script>
+        let mem1={num:1, name:"홍길동", addr:"역삼동"};
+        //mem1 변수 안에 들어있는 object type data 를 a 라는 변수에 대입(복사해주기)
+        let a=mem1;
+        //b 는 number type
+        let b=mem1.num;
+        //c 는 string type
+        let c=mem1.name;
+        //d 는 string type
+        let d=mem1.addr;
+
+        //위의 버튼을 눌렀을때 아래의 두줄이 실행되도록 해보세요.
+        function step(){
+            mem1.num=7;
+            mem1.name="배동현";
+            mem1.addr="인천광역시";
+            document.querySelector("body");
+        };
+    </script>
+</body>
+</html>
