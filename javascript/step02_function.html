@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step02_function.html</title>
+</head>
+<body>
+    <script>
+        let f1=function(){
+            console.log("f1() 함수가 호출됨");
+        };
+
+        let f2=function(){
+            console.log("f2() 함수가 호출됨");
+            return undefined;
+        }
+
+        let f3=function(){
+            console.log("f3() 함수가 호출됨");
+            return 999;
+        }
+
+        let f4=function(){
+            console.log("f4() 함수가 호출됨");
+            return "kim";
+        }
+
+        let getFortune=function(){
+            //오늘의 운세를 어떤 로직을 수행해서 얻어냈다고 가정하자
+            let fortune="동쪽으로 가면 귀인을 만나요!";
+            //얻어낸 오늘의 운세를 return 해 주기
+            return fortune;
+        };
+
+        let result = getFortune();
+
+        console.log(result);
+        
+    </script>
+</body>
+</html>
