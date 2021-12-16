@@ -26,11 +26,40 @@
         /*
             class 속성의 값이 box 인 div 에 mousedown 이 되었을때 실행할 함수를 등록해 보세요.
         */
-        document.querySelectorAll(".box")[0].addEventListener("mousedown", function(){});
-        document.querySelectorAll(".box")[1].addEventListener("mousedown", function(){});
-        document.querySelectorAll(".box")[2].addEventListener("mousedown", function(){});
-        document.querySelectorAll(".box")[3].addEventListener("mousedown", function(){});
-        document.querySelectorAll(".box")[4].addEventListener("mousedown", function(){});
+        let div= document.querySelectorAll(".box")
+
+        for(let i=0;i<5;i++){
+            div[i].addEventListener("mousedown", function(){
+                //이벤트 리스너로 등록된 함수 안에서 this 는 이벤트가 일어난 바로 그 요소를 가리킨다.
+                console.log("this");
+                this.innerText=i+ " index clicked!";
+            });
+        }
+        
+        /*
+        for(let i=0;i<5;i++){
+            document.querySelectorAll(".box")[i].addEventListener("mousedown", function(){
+            console.log("mousedown!");
+            });
+        }
+        */
+        /* 
+        document.querySelectorAll(".box")[0].addEventListener("mousedown", function(){
+            console.log("mousedown!");
+        });
+        document.querySelectorAll(".box")[1].addEventListener("mousedown", function(){
+            console.log("mousedown!");
+        });
+        document.querySelectorAll(".box")[2].addEventListener("mousedown", function(){
+            console.log("mousedown!");
+        });
+        document.querySelectorAll(".box")[3].addEventListener("mousedown", function(){
+            console.log("mousedown!");
+        });
+        document.querySelectorAll(".box")[4].addEventListener("mousedown", function(){
+            console.log("mousedown!");
+        });
+        */
 
     </script>
 </body>
