@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step06_eventListener2.html</title>
+
+    <style>
+        #one{
+            width: 500px;
+            height: 500px;
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>마우스 이벤트 처리</h1>
+    <div id="one">
+
+    </div>
+    <script>
+        document.querySelector("#one").addEventListener("mousemove", function(e){
+            //console.log("mousemove!");
+            //e는 발생한 event의 정보를 담고 있는 object가 전달된다.
+            console.log(e);
+            //이벤트가 발생한곳의 x 좌표와 y좌표 얻어내서 문자열 구성하기
+            let x=e.offsetX;
+            let y=e.offsetY;
+
+            //출력할 문자열 구성
+            let info="x:"+x+"y:"+y;
+
+            //콘솔에 출력하기
+            console.log(info);
+            //div 의 innerText 로 출력하기
+            document.querySelector("#one").innerText=info;
+        });
+    </script>
+</body>
+</html>
