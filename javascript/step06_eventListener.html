@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step06_eventListener.html</title>
+</head>
+<body>
+    <h1>이벤트 처리</h1>
+    <button onclick="clicked()" onmouseover="overed()">눌러보셈1</button>
+    <button id="one">눌러보셈2</button>
+    <script>
+
+        let clicked=function(){
+            console.log("버튼을 눌렀네요?");
+        };
+
+        let overed=function(){
+            console.log("마우스를 올렸네요?");
+        };
+        // .addEventListener("이벤트명",callback 함수)
+        document.querySelector("#one").addEventListener("click",function(){
+            console.log("버튼을 눌렀네요?");
+        });
+        /* event의 종류(외워서 사용해야 함)
+            click, mouseover, mouseout, mousemove, mousedown,mouseup,
+            focus,blur, 
+            keydown, keyup, keypressed
+            input, change,submit ...
+        */
+        document.querySelector("#one").addEventListener("mouseover", function(){
+            console.log("마우스를 올렸네요?");
+        })
+
+
+    </script>
+</body>
+</html>
