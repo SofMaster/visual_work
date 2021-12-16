@@ -8,10 +8,27 @@
 </head>
 <body>
     <input id="inputMsg" type="text" placeholder="문자열 입력...">
-    <button id="sendBtn">전송</button>
+    <button onclick="send()" id="sendBtn">전송</button>
     <div id="msgList">
         <p>하나</p>
         <p>두울</p>
     </div>
+    <script>
+        /* 
+            전송 버튼을 눌렀을때 input 요소에 입력한 value 값을 읽어와서
+            p 요소를 만든다음 p요소의 innerText 로 출력하고
+            그 p 요소를 div 의 자식 요소로 추가 해 보세요.
+        */
+      let send=function(){
+        //1. input 요소에 입력한 value 값 읽어오기
+        let msg=document.querySelector("#inputMsg").value;  
+        //2. p 요소를 만들기
+        let p1=document.createElement("p");
+        //3. 위에서 만든 p 요소의 innerText로 출력
+        p1.innerText=msg;
+        //4. 위에서 만든 p 요소를 div 의 자식 요소로 추가
+        document.querySelector("#msgList").append(p1);
+      };
+    </script>
 </body>
 </html>
