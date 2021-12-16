@@ -12,7 +12,7 @@
     <div>div2 입니다</div>
     <div id="one">div3 입니다</div>
     <div id="two">div4 입니다</div>
-    <div>div5 입니다</div>
+    <div id="three">div5 입니다</div>
 
     <script>
         document.querySelector("#one").innerText="수정합니다.";
@@ -21,6 +21,9 @@
         let a=document.querySelector("#two");
         a.innerText="또 수정합니다.";
         a.style.color="yellow";
+
+        let info=document.querySelector("#three").innerText;
+        info="바껴라"; //동작 안함
 
         document.querySelectorAll("div")[0].style.color="green";
     </script>
