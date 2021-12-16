@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step05_example2.html</title>
+</head>
+<body>
+    <button onclick="make()">만들기</button>
+    <div id="one">
+
+
+
+    </div>
+    <script>
+        let names=["김구라","해골","원숭이","주뎅이","덩어리"];
+        /*
+            만들기 버튼을 누르면 반복문 돌면서 names 배열에 저장된 문자열을 하나씩 참조해서
+            p 요소를 만들고 만든 p 요소의 innerText 로 참조한 문자열을 넣어주고
+            만든 p요소를 id 가 one 인 div 의 자식요소로 추가 되게 해 보세요.
+
+            버튼을 눌렀을때 아래와 같은 구조로 만들어지게 하면 됩니다.
+            <div id="one">
+                <p>김구라</p>
+                <p>해골</p>
+                <p>원숭이</p>
+                <p>주뎅이</p>
+                <p>덩어리</p>
+        */
+        let make=function(){
+            for(let i=0;i<names.length;i++){
+                let p1=document.createElement("p");
+                p1.innerText=names[i];
+                document.querySelector("#one").append(p1);
+            }
+        
+
+
+
+
+       }
+    </script>
+</body>
+</html>
