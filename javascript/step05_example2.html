@@ -29,17 +29,23 @@
                 <p>덩어리</p>
         */
         let make=function(){
-            for(let i=0;i<names.length;i++){
+            //반복문 돌면서 
+            for(let i=0; i<names.length ;i++){
+                //배열의 i 번째 방에 있는 item 을 참조해서 
+                let tmp=names[i];
+                //p요소를 만들고
                 let p1=document.createElement("p");
-                p1.innerText=names[i];
+                //innerText 를 출력하고 
+                p1.innerText=tmp;
+                //div 에 append 하기 
                 document.querySelector("#one").append(p1);
             }
-        
+        };
 
 
 
 
-       }
+    
     </script>
 </body>
 </html>
