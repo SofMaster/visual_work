@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step05_example3.html</title>
+</head>
+<body>
+    <input id="inputName" type="text" placeholder="친구 이름 입력..">
+    <button onclick="save()">배열에 저장하기</button>
+    <button onclick="show()">출력하기</button>
+    <div id="friendList">
+
+
+
+    </div>
+    <script>
+        let friends=[];
+
+        function save(){
+            //1. 입력한 이름 읽어오기
+            let name=document.querySelector("#inputName").value;
+            //2. 배열에 저장하기
+            friends.push(name);
+            //3. 알림 띄우기
+            alert("저장 했습니다!");
+        }
+
+        let show=function(){
+            for(let i=0;i<friends.length; i++){
+                let tmp=friends[i];
+                let p1=document.createElement("p");
+                p1.innerText=tmp;
+                document.querySelector("#friendList").append(p1);
+            }
+        };
+
+
+
+    </script>
+</body>
+</html>
