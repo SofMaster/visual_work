@@ -10,15 +10,22 @@
     <h1>Document object Model</h1>
     <p>문서 객체 모델에 대해서 알아보자</p>
     <input type="text">
+    <input id="one" type="text">
     <button>버튼</button>
     <div>div 입니다.</div>
+    <!-- 이미지를 상대경로로 로딩 시키기 -->
     <img src="images/kim2.png" alt="김구라 이미지 입니다." />
-    
+    <!-- 이미지를 절대 경로로 로딩 시키기 -->
+    <img src="C:\acorn202112\visual_work\javascript\images\kim2.png" alt="김구라 이미지"/>
+    <!-- 이미지를 웹에서의 경로로 로딩 시키기 -->
+    <img src="https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/" alt="">
     <script>
       //h1 요소의 innerText를 읽어와서 a 라는 변수에 담기
       let a=document.querySelector("h1").innerText;
       //input 요소의 value 로 안녕하세요 라는 문자열 넣어주기
       document.querySelector("input").value="안녕하세요";
+      document.querySelector("#one").value="안녕히가세요";
+      document.querySelectorAll("input")[1].value="바보";
     </script>
 </body>
 </html>
