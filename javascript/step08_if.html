@@ -16,7 +16,8 @@
         document.querySelector("#deleteBtn").addEventListener("click",function(){
             
             let isDelete=confirm("삭제 하시겠습니까?");
-
+            
+            //만일 지울거라면
             if(isDelete){
             //id가 msg인 요소 삭제하기
             document.querySelector("#msg").remove();
