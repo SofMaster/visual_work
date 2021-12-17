@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step09_example3</title>
+</head>
+<body>
+    <h1>대입연산자 예제</h1>
+    <input type="text" id="inputNum" placeholder="누적 시킬 숫자 입력...">
+    <button id="addBtn">누적하기</button>
+    <p id="result">0</p>
+    <script>
+        /*
+            input 요소에 숫자를 입력하고 
+            누적하기 버튼을 눌렀을때    
+            p 요소의 innerText 로 총 누적된(합) 숫자를 출력하는 code 를 작성해 보세요.
+            (대입연산자 += 를 활용해 보세요)
+        */
+       /*
+        document.querySelector("#addBtn").addEventListener("click",function(){
+            let num=Number(document.querySelector("#inputNum").value);
+            let last=Number(document.querySelector("#result").innerText);
+            let lastVal=last +=num;
+            document.querySelector("#result").innerText=Number(lastVal);
+        });
+                //숫자를 누적 시킬 변수 만들고 초기값 0 대입 
+        let sum=0;
+
+        document.querySelector("#addBtn").addEventListener("click", function(){ 
+        //입력한 문자열을 읽어와서 숫자로 바꾸기 
+        let num=Number(document.querySelector("#inputNum").value);
+        //sum 이라는 변수의 값을 num 만큼 증가 시키기 
+        sum += num;
+    //sum 을 출력하기
+        document.querySelector("#result").innerText=sum;
+        });
+        */
+
+
+    </script>
+</body>
+</html>
