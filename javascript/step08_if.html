@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step08_if.html</title>
+</head>
+
+<body>
+
+<h1>if 문 사용하기</h1>
+<p id="msg">어쩌구 저쩌구...</p>
+<button id="deleteBtn">삭제</button>
+    <script>
+        document.querySelector("#deleteBtn").addEventListener("click",function(){
+            
+            let isDelete=confirm("삭제 하시겠습니까?");
+
+            if(isDelete){
+            //id가 msg인 요소 삭제하기
+            document.querySelector("#msg").remove();
+            }
+        });
+    </script>
+</body>
+</html>
