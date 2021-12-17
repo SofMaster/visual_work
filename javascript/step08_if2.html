@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step08_if2.html</title>
+</head>
+<body>
+    <p id="one"></p>
+
+    <script>
+        let isMan=confirm("당신은 남자 입니까?");
+        // 만일 남자라면
+        if(isMan){
+            document.querySelector("#one").innerText="남자를 환영합니다.";
+        }
+        else{ //그렇지 않으면  
+            document.querySelector("#one").innerText="여자를 환영합니다.";
+        }
+
+        
+        
+    </script>
+</body>
+</html>
