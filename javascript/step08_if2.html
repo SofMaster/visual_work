@@ -10,6 +10,15 @@
     <p id="one"></p>
 
     <script>
+        let a=confirm("당신은 남자입니까?");
+        if(a){
+            document.querySelector("#one").innerText="남자를 환영합니다.";
+        }
+        else{
+            document.querySelector("#one").innerText="여자를 환영합니다.";
+        }
+        
+        /*
         let isMan=confirm("당신은 남자 입니까?");
         // 만일 남자라면
         if(isMan){
@@ -18,7 +27,7 @@
         else{ //그렇지 않으면  
             document.querySelector("#one").innerText="여자를 환영합니다.";
         }
-
+        */
         
         
     </script>
