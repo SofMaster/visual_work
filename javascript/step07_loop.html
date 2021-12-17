@@ -14,13 +14,20 @@
         // "hello!" 문자열을 greet 배열에 10개 저장하려면?
         for(let i=0;i<10;i++){
             greet.push("hello!");
+            console.log("greet[i]");
         }
+        /*
+        for(let i=0;i<10;i++){
+            greet.push("hello!");
+        }
+        */
 
         //greet 배열에 저장된 아이템(문자열)을 순서대로 콘솔창에 출력하기
+        /*
         for(let i=0;i<10;i++){
             console.log(greet[i]);
         }
-
+        */
         let nums=[10,20,30,40,50,60,70];
         /*
             전달된 함수는 배열의 방의 갯수만큼 반복 호출되고
@@ -29,11 +36,12 @@
             두번째 인자로는 아이템의 인덱스 값이 전달된다.
             (함수의 두번째 매개 변수에 인덱스가 전달된다) 
         */
-        nums.forEach(function(item, index){
+        /*nums.forEach(function(item, index){
             console.log("호출됨!");
             console.log(item);
             console.log(index);
         });
+        */
     </script>
 
 <script>
