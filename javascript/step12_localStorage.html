@@ -7,6 +7,40 @@
     <title>step12_localStorage.html</title>
 </head>
 <body>
-    
+    <input type="text" id="inputFortune" placeholder="오늘의 운세 입력...">
+    <button id="saveBtn">localStorage 에 저장하기</button>
+    <button id="showBtn">저장된 운세 불러오기</button>
+    <button id="deleteBtn">운세 삭제하기</button>
+    <p id="one"></p>
+    <script>
+        document.querySelector("#saveBtn").addEventListener("click",function(){
+            //입력한 운세를 읽어와서
+            let fortune=document.querySelector("#inputFortune").value;
+            //localStorage에 저장하기(일반 object를 사용하는 느낌으로 사용하면 된다.)
+            localStorage.fortune=fortune;
+            alert("저장했습니다.");
+        });
+        document.querySelector("#showBtn").addEventListener("click",function(){
+            //저장된 오늘의 운세를 읽어온다.
+            let savedFortune=localStorage.fortune;
+            if(savedFortune==undefined){
+                alert("저장된 운세가 없습니다.");
+                return; //함수를 여기서 끝내라
+            }
+            document.querySelector("#one").innerText=localStorage.fortune;
+        });
+        document.querySelector("#deleteBtn").addEventListener("click",function(){
+            
+            let savedFortune=localStorage.fortune;
+            if(savedFortune==undefined){
+                alert("저장된 운세가 없습니다.");
+                return; //함수를 여기서 끝내라
+            }
+            document.querySelector("#one").innerText=localStorage.fortune;
+            delete localStorage.fortune;
+            alert("삭제했습니다.");
+            document.querySelector("#one").innerText=null;
+        });
+    </script>
 </body>
 </html>
