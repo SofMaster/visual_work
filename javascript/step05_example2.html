@@ -28,6 +28,7 @@
                 <p>주뎅이</p>
                 <p>덩어리</p>
         */
+
         let make=function(){
             //반복문 돌면서 
             for(let i=0; i<names.length ;i++){
@@ -41,11 +42,17 @@
                 document.querySelector("#one").append(p1);
             }
         };
-
-
-
-
-    
+        
+        /* 시험 대비 실습
+        let make=function(){
+            for(let i=0;i<names.length;i++){
+                let a=names[i];
+                let b=document.createElement("p");
+                b.innerText=a;
+                document.querySelector("#one").append(b);
+            }
+        }
+        */
     </script>
 </body>
 </html>
