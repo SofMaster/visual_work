@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step12_localStorage2.html</title>
+</head>
+<body>
+    <h1>localStorage에 저장된 메세지 목록</h1>
+    <button id="showBtn">불러오기</button>
+    <ul id="msgList">
+
+    </ul>
+    <script>
+        document.querySelector("#showBtn").addEventListener("click",function(){
+            let a=JSON.parse(localStorage.savedMsg);
+            a.forEach(function(item){
+                //item 은 배열에 저장된 문자열이다.
+                let li=document.createElement("li");
+                li.innerText=item;
+                document.querySelector("#msgList").append(li);
+                
+            });
+        });
+
+        document.querySelector("#showBtn").addEventListener("click",function(){
+            let a=JSON.parse(localStorage.savedMsg);
+            for(let i=0;i<a.length;i++){
+                let b=a[i];
+                let c=document.createElement("li");
+                c.innerText=b;
+                document.querySelector("#msgList").append(c);
+            }
+        });
+        //localStorage에 저장할 데이터를 담고 있는 배열
+        //let msgs=["하나","두울","세엣"];
+        //배열안에 들어 있는 정보를 이용해서 JSON문자열 만들기
+        //let jsonStr=JSON.stringify(msgs);
+        //localStorage에 savedMsgs 라는 키값으로 JSON문자열 저장하기
+        //localStorage.savedMsg=jsonStr;
+    </script>
+</body>
+</html>
