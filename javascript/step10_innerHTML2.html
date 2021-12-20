@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step10_innerHTML2.html</title>
+</head>
+<!-- 버튼을 눌러서 creatElement가 아닌 innerHTML로 새로운 li추가하기-->
+<body>
+    <input type="text" id="inputMsg">
+    <button id="addBtn">추가하기</button>
+    <input type="text" id="inputMsg2">
+    <button id="addBtn2">추가하기2</button>
+    <ul id="msgList">
+
+    </ul>
+    <script>
+        document.querySelector("#addBtn").addEventListener("click",function(){
+            //입력한 문자열 읽어오기
+            let msg=document.querySelector("#inputMsg").value
+            document.querySelector("#msgList").insertAdjacentHTML("beforeend","<li>"+msg+"</li>");
+        });
+        //백틱을 이용하여 연결연산자를 사용하지 않고 변수를 사용하기
+        document.querySelector("#addBtn2").addEventListener("click",function(){
+            //입력한 문자열 읽어오기
+            let msg=document.querySelector("#inputMsg2").value
+            document.querySelector("#msgList").insertAdjacentHTML("beforeend",`<li>${msg}</li>`);
+        });
+    </script>
+</body>
+</html>
