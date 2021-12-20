@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step11_JSON.html</title>
+</head>
+<body>
+    <script>
+    /*
+        application에서 주로 사용하는 문자열의 형식
+        1. xml
+
+        <info>
+            <name>김구라</name>
+            <addr>노량진</addr>
+        </info>
+
+        2. json(JavaScript Obect Notation)
+            {"num":1, "name":"김구라", "addr":"노량진"}
+
+    */
+        // JSON 형식의 string
+        let jsonStr='{"num":1, "name":"김구라", "addr":"노량진"}';
+
+        // JSON 형식의 string을 object로 변환하기
+        let mem=JSON.parse(jsonStr);
+        
+        //object이기 때문에 값을 쉽게 참조할 수 있다.
+        let a=mem.num;  //1
+        let b=mem.name; //"김구라"
+        let c=mem.addr; //"노량진"
+
+        /*
+            JSON 문자열 작성 규칙
+
+            { "key":value, "key2":value2,...}
+            [value,value2,value3,value4,...]
+
+            -value 가 될수 있느 ㄴ형식
+
+            숫자:10,10.1 정수 혹은 실수
+            문자:"xxx" 쌍 따움표로 감싼다.
+            논리:ture or false
+            object:{}
+            array:[]
+            빈값: null
+            위의 6가지만 가능
+        */
+    </script>
+</body>
+</html>
