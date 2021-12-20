@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step10_innerHTML.html</title>
+</head>
+<body>
+    <h1>.innerHTML vs .innerText</h1>
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <script>
+        //html 형식의 문자열을 담고 있는 변수
+        let content="<a href='https://daum.net'>daum</a>";
+
+        document.querySelector("#one").innerText=content;
+        document.querySelector("#two").innerHTML=content;
+
+        let img="<img src='images/kim1.png'>";
+        document.querySelector("#three").innerHTML=img;
+      //document.querySelector("#three").innerText=img;
+    </script>
+</body>
+</html>
