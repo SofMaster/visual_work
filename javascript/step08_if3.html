@@ -20,6 +20,7 @@
             69~60점 => D
             59~0점 => F
         */
+
         document.querySelector("#checkBtn").addEventListener("click",function(){
             let score=document.querySelector("#point").value;
             if(score>=90){
@@ -39,26 +40,27 @@
             }
 
         });
-        /*
+        /* 시험 대비 실습
         document.querySelector("#checkBtn").addEventListener("click",function(){
-            let score=document.querySelector("#point").value;
-            if(score>=90){
-                document.querySelector("#info").innerText="A입니다.";
+            let a=document.querySelector("#point").value;
+            if(a>=90){
+                document.querySelector("#info").innerText="A";
             }
-            else if(score>=80){
-                document.querySelector("#info").innerText="B입니다.";
+            else if(a>=80){
+                document.querySelector("#info").innerText="B";
             }
-            else if(score>=70){
-                document.querySelector("#info").innerText="C입니다.";
+            else if(a>=70){
+                document.querySelector("#info").innerText="C";
             }
-            else if(score>=60){
-                document.querySelector("#info").innerText="D입니다.";
+            else if(a>=60){
+                document.querySelector("#info").innerText="D";
             }
             else{
-                document.querySelector("#info").innerText="F입니다.";
+                document.querySelector("#info").innerText="F";
             }
-        })
+        });
         */
+        
     </script>
 </body>
 </html>
