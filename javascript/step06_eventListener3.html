@@ -26,6 +26,7 @@
         /*
             class 속성의 값이 box 인 div 에 mousedown 이 되었을때 실행할 함수를 등록해 보세요.
         */
+
         let div= document.querySelectorAll(".box")
 
         for(let i=0;i<5;i++){
@@ -35,7 +36,15 @@
                 this.innerText=i+ " index clicked!";
             });
         }
-        
+        /* 시험 대비 실습
+        let div=document.querySelectorAll(".box");
+        for(let i=0;i<div.length;i++){
+            div[i].addEventListener("mousedown",function(){
+                console.log("this");
+                this.innerText=i+"index clicked";
+            });
+        };
+        */
         /*
         for(let i=0;i<5;i++){
             document.querySelectorAll(".box")[i].addEventListener("mousedown", function(){
