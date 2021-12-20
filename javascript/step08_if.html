@@ -13,6 +13,15 @@
 <p id="msg">어쩌구 저쩌구...</p>
 <button id="deleteBtn">삭제</button>
     <script>
+        /* 시험 대비 실습
+        document.querySelector("#deleteBtn").addEventListener("click",function(){
+            let a=confirm("정말 삭제하시겠습니까?");
+            if(a){
+                document.querySelector("#msg").remove();
+            }
+        })
+        */
+
         document.querySelector("#deleteBtn").addEventListener("click",function(){
             let a=confirm("삭제 하시겠습니까?");
             if(a){
