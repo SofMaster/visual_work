@@ -8,12 +8,14 @@
 </head>
 <body>
     <h1>javascript 데이터 type</h1>
-    
+    <h7>dafefa</h7>
     <button onclick="move()">눌러보셈</button>
     <button onclick="makeImage()">이미지 파일 실행</button>
+    <!--
     <button onclick="let image=document.createElement('img');
     image.setAttribute('src', 'images/kim1.png');
-    document.querySelector('body').append(image);">이미지 파일 실행</button>
+    document.querySelector('body').append(image);">이미지 파일 실행</button> 
+    -->
     <button onclick="add()" id="addBtn">0</button>
     
     
@@ -29,11 +31,14 @@
             image.setAttribute("src", "images/kim1.png");
             document.querySelector("body").append(image);
         }
+
+        /*
         function makeImage(){
             let image=document.createElement('img');
             image.setAttribute('src', 'images/kim1.png');
             document.querySelector('body').append(image);
         }
+        */
 
         let count=0;
 
@@ -42,7 +47,7 @@
             document.querySelector("#addBtn").innerText=count;
         }
         
-        makeImage();
+        
     
     </script>
 </body>
