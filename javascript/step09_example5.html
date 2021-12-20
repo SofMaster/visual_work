@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step09_example5.html</title>
+</head>
+<body>
+    <h1>ul 요소도 같이 사용해 보기</h1>
+    <input type="text" id="inputMsg">
+    <button id="addBtn">추가</button>
+    <ul id="msgList">
+        <li>하나</li>
+        <li>두울</li>
+        <li>세엣</li>
+    </ul>
+    <script>
+        //input 요소에 keyup 이벤트가 일어 났을때 실행할 함수 등록
+        document.querySelector("#inputMsg").addEventListener("keyup", function(e){
+            console.log(e);
+            //만일 엔터키를 눌렀다면
+            if(e.keyCode == 13){
+                //1. 입력한 문자열 읽어오기
+                send();
+            }
+        });
+        let send=function(){
+                let a=document.querySelector("#inputMsg").value;
+                let b=document.createElement("li")
+                b.innerText=a;
+                document.querySelector("#msgList").append(b); 
+        }
+        /*
+        document.querySelector("#inputMsg").addEventListener("keyup",function(e){
+            console.log(e);
+            //만일 Enter키를 눌렀다면
+            if(e.keyCode==13){
+            
+                let a=document.querySelector("#inputMsg").value;
+                let b=document.createElement("li")
+                b.innerText=a;
+                document.querySelector("#msgList").append(b);
+                // input 요소에 빈문자열을 넣어서 입력한 내용을 지우가
+                document.querySelector("#inputMsg").value="" 
+            }
+        });
+        */
+    </script>
+</body>
+</html>
