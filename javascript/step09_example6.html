@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step09_example6.html</title>
+    <style>
+        /* 아이디가 msgList인 요소의 자손 요소중에서 li에 마우스가 hover 되었을때 적용할 css*/
+        #msgList li:hover{
+            background-color: yellow;
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>ul 요소도 같이 사용해 보기</h1>
+    <input type="text" id="inputMsg">
+    <button id="addBtn">추가</button>
+    <ul id="msgList">
+        <li>하나</li>
+        <li>두울</li>
+        <li>세엣</li>
+    <script>
+        document.querySelector("#inputMsg").addEventListener("keyup",function(e){
+            console.log(e);
+            //만일 Enter키를 눌렀다면
+            if(e.keyCode==13){
+            
+                let a=document.querySelector("#inputMsg").value;
+                let b=document.createElement("li")
+                b.innerText=a;
+                document.querySelector("#msgList").append(b);
+                // input 요소에 빈문자열을 넣어서 입력한 내용을 지우가
+                document.querySelector("#inputMsg").value="" 
+                b.addEventListener("click",function(){
+                    let isDelete=confirm("삭제를 원하면 확인을 누르세요");
+                    if(isDelete){
+                    this.remove();
+                    };
+                });
+        };
+    });
+
+        document.querySelectorAll("#msgList li").forEach(function(item){
+            //item은 li요소의 참조값이다.
+            item.addEventListener("click",function(){
+                //this는 "click" 이벤트가 일어난 그 요소의 참조값을 가리킨다.
+                console.log(this);
+                let isDelete=confirm("삭제를 원하면 확인을 누르세요");
+                if(isDelete){
+                    this.remove();
+                }
+            })
+        });
+
+
+    </script>
+</body>
+</html>
