@@ -17,9 +17,7 @@
 </head>
 <body>
     <h1>마우스 이벤트 처리</h1>
-    <div id="one">
-
-    </div>
+    <div id="one"></div>
     <script>
         document.querySelector("#one").addEventListener("mousemove", function(e){
             //console.log("mousemove!");
@@ -37,6 +35,17 @@
             //div 의 innerText 로 출력하기
             document.querySelector("#one").innerText=info;
         });
+        /* 시험 대비 실습
+        document.querySelector("#one").addEventListener("mousemove",function(e){
+        console.log(e);
+        let x=e.offsetX;
+        let y=e.offsetY;
+
+        let info="x:"+x+"y:"+y;
+        console.log(info);
+        document.querySelector("#one").innerText=info;        
+        });
+        */
     </script>
 </body>
 </html>
