@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step11_JSON2.html</title>
+</head>
+<body>
+    <h1>JSON 테스트</h1>
+    <script>
+        let jsonStr=`
+        {
+            "num":1,
+            "name":"김구라",
+            "isMan":true,
+            "hobby":["piano","programming","carom"],
+            "bodyInfo":{
+                "height":180,
+                "weight":90
+            },
+            "address":null
+        }
+        `;
+        //JSON 문자열을 이용해서 object 만들기
+        let obj=JSON.parse(jsonStr);
+
+        //번호
+        let num=obj.num;
+        //취미
+        let hobby=obj.hobby; //array
+        //신체 정보
+        let bodyInfo=obj.bodyInfo; //object
+    </script>
+</body>
+</html>
