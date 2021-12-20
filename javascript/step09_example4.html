@@ -28,11 +28,20 @@
             -hint
             .style.marginLeft=변수+"px";
         */
+
+        let point=0;
+        document.querySelector("#moveBtn").addEventListener("click",function(){
+            point+=100;
+            document.querySelector("#kim").style.marginLeft=point+"px";
+        })
+        
+        /* 시험 대비 실습
         let point=0;
         document.querySelector("#moveBtn").addEventListener("click",function(){
             point += 100;
             document.querySelector("#kim").style.marginLeft=point+"px";
         });
+        */
     </script>
 </body>
 </html>
