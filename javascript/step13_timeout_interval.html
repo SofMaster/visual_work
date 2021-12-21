@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step13_timeout_interval.html</title>
+</head>
+<body>
+    <h1>setTimesout() 함수</h1>
+    <button id="moveBtn">이동하기</button>
+    <p id="info"></p>
+    <script>    
+        /*
+            setTimeout(함수, 지연시간);
+
+            지연시간 경과후에 함수가 1번 호출된다.
+        */
+        setTimeout(function(){
+            alert("호출됨");
+        }, 5000);
+
+        document.querySelector("#moveBtn").addEventListener("click",function(){
+            document.querySelector("#info").innerText="5초 이후에 이동합니다.";
+            setTimeout(function(){
+                //javascript로 웹페이지 이동하기
+                location.href="https://daum.net";
+            },5000);
+        });
+
+    </script>
+</body>
+</html>
