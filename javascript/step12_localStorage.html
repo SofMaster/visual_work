@@ -29,8 +29,8 @@
             }
             document.querySelector("#one").innerText=localStorage.fortune;
         });
+
         document.querySelector("#deleteBtn").addEventListener("click",function(){
-            
             let savedFortune=localStorage.fortune;
             if(savedFortune==undefined){
                 alert("저장된 운세가 없습니다.");
