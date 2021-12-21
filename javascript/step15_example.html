@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step15_example.html</title>
+</head>
+<body>
+    // Audio 생성자 함수를 이용해서 Audio 객체 생성하기
+    <h1>Audio 생성자 함수 사용하기</h1>
+    <button id="playBtn">재생</button>
+    <button id="pauseBtn">일시정지</button>
+    <button id="resetBtn">재생위치를 처음으로</button>
+    <script>
+        let piano=new Audio("sounds/piano.mp3");
+
+        document.querySelector("#playBtn").addEventListener("click",function(){
+            piano.play();
+        });
+
+        document.querySelector("#pauseBtn").addEventListener("click",function(){
+            piano.pause();
+        });
+
+        document.querySelector("#resetBtn").addEventListener("click",function(){
+            piano.currentTime=0;
+        });
+    </script>
+</body>
+</html>
