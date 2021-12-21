@@ -9,10 +9,18 @@
 <body>
     <h1>localStorage에 저장된 메세지 목록</h1>
     <button id="showBtn">불러오기</button>
+    <button id="showBtn2">불러오기2</button>
     <ul id="msgList">
 
     </ul>
     <script>
+        //localStorage에 저장할 데이터를 담고 있는 배열
+        let msgs=["하나","두울","세엣"];
+        //배열안에 들어 있는 정보를 이용해서 JSON문자열 만들기
+        let jsonStr=JSON.stringify(msgs);
+        //localStorage에 savedMsgs 라는 키값으로 JSON문자열 저장하기
+        localStorage.savedMsg=jsonStr;
+
         document.querySelector("#showBtn").addEventListener("click",function(){
             let a=JSON.parse(localStorage.savedMsg);
             a.forEach(function(item){
@@ -23,7 +31,7 @@
             });
         });
 
-        document.querySelector("#showBtn").addEventListener("click",function(){
+        document.querySelector("#showBtn2").addEventListener("click",function(){
             let a=JSON.parse(localStorage.savedMsg);
             for(let i=0;i<a.length;i++){
                 let b=a[i];
@@ -32,12 +40,7 @@
                 document.querySelector("#msgList").append(c);
             }
         });
-        //localStorage에 저장할 데이터를 담고 있는 배열
-        //let msgs=["하나","두울","세엣"];
-        //배열안에 들어 있는 정보를 이용해서 JSON문자열 만들기
-        //let jsonStr=JSON.stringify(msgs);
-        //localStorage에 savedMsgs 라는 키값으로 JSON문자열 저장하기
-        //localStorage.savedMsg=jsonStr;
+
     </script>
 </body>
 </html>
