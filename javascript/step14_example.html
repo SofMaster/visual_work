@@ -8,6 +8,7 @@
 </head>
 <body>
     <button id="myBtn">눌러보셈</button>
+    <button id="myBtn2">눌러보셈</button>
     <p id="info"></p>
     <script>
         /*
@@ -16,7 +17,8 @@
             2. 위의 작업이 성공했다면 p요소에 숫자를 출력하지 말고
                가위 또는 바위 또는 보 라는 문자열이 무작위로 출력되도록 수정해 보세요.
         */
-       document.querySelector("#myBtn").addEventListener("click",function(){
+        // else if문 사용하기
+        document.querySelector("#myBtn").addEventListener("click",function(){
             let a=Math.floor(Math.random()*3);
             document.querySelector("#info").innerText=a;
 
@@ -29,7 +31,15 @@
             else{
                 document.querySelector("#info").innerText="보";
             }
-       });
+        });
+        
+        // 배열에 값을 참조하기
+        let data=["가위", "바위", "보"];
+
+       document.querySelector("#myBtn2").addEventListener("click",function(){
+            let a=Math.floor(Math.random()*3);
+            document.querySelector("#info").innerText=data[a];
+        });
     </script>
 </body>
 </html>
