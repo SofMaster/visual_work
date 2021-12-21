@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step13_timeout_interval2.html</title>
+</head>
+<body>
+    <h1>setInterval()함수 사용하기</h1>
+    <button id="cancelBtn">취소</button>
+    <script>
+        /*
+            setInterval(함수, 시간)
+
+            반복 주기마다 함수가 실행된다.
+        */
+        let intervalId=setInterval(function(){
+            console.log("호출됨1");
+            },1000);
+
+        let intervalId2=setInterval(function(){
+            console.log("호출됨2");
+            },2000);
+
+        document.querySelector("#cancelBtn").addEventListener("click",function(){
+            clearInterval(intervalId);
+            clearInterval(intervalId2);
+        });
+    </script>
+</body>
+</html>
