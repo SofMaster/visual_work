@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step14_example.html</title>
+</head>
+<body>
+    <button id="myBtn">눌러보셈</button>
+    <p id="info"></p>
+    <script>
+        /*
+            1.눌러보셈 버튼을 누르면 p요소에 0 또는 1 또는 2 라는 숫자가 무작위로 출력되도록 해 보세요.
+
+            2. 위의 작업이 성공했다면 p요소에 숫자를 출력하지 말고
+               가위 또는 바위 또는 보 라는 문자열이 무작위로 출력되도록 수정해 보세요.
+        */
+       document.querySelector("#myBtn").addEventListener("click",function(){
+            let a=Math.floor(Math.random()*3);
+            document.querySelector("#info").innerText=a;
+
+            if(a==0){
+                document.querySelector("#info").innerText="가위";
+            }
+            else if(a==1){
+                document.querySelector("#info").innerText="바위";
+            }
+            else{
+                document.querySelector("#info").innerText="보";
+            }
+       });
+    </script>
+</body>
+</html>
