@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step15_constructorFunction.html</title>
+</head>
+<body>
+    <h1>생성자 함수에 대해서 알아보자</h1>
+    <script>
+        //1. 필요 할때 마다 같은 구조로 만드는 방법
+        let mem1={num:1, name:"김구라"};
+        let mem2={num:2, name:"해골"};
+        let mem3={num:3, name:"원숭이"};
+
+        function getMember(num,name){
+            //빈 object 를 만들어서
+            let tmp={};
+            //인자로 전달받은 정보를 object에 담고
+            tmp.num=num;
+            tmp.name=name;
+            //만든 object의 참조값을 리턴해주기
+            return tmp;
+        };
+        //2. 같은 구조로 만들어진 object 를 리턴하는 함수를 이용하는 방법
+        let mem4=getMember(1,"김구라");
+        let mem5=getMember(2,"해골");
+        let mem6=getMember(3,"원숭이");
+
+
+        //생성자 함수(constructor function)
+        function Member(num,name){
+            this.num=num;
+            this.name=name;
+        };
+        //생성자 함수를 이용해서 같은 구조의 object를 만드는 방법
+        let mem7=new Member(1,"김구라");
+        let mem8=new Member(2,"해골");
+        let mem9=new Member(3,"원숭이");
+
+    </script>
+</body>
+</html>
