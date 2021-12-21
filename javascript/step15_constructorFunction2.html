@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step15_constructorFunction2.html</title>
+</head>
+<body>
+    <script>
+        let car1={
+            name:"소나타",
+            drive:function(){
+                console.log(this.name+"이(가) 달려요");
+            }
+        };
+        let car2={
+            name:"그랜저",
+            drive:function(){
+                console.log(this.name+"이(가) 달려요");
+            }
+        };
+
+        function Car(a){
+            this.name=a;
+            this.drive=function(){
+                console.log(this.name+"이(가) 달려요");
+            };
+        };
+
+        let car3=new Car("프라이드");
+        let car4=new Car("아반떼");
+    </script>
+</body>
+</html>
