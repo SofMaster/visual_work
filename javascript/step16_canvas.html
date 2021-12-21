@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step16_canvas.html</title>
+    <style>
+        canvas{
+            border:1px dotted gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>canvas 요소 사용해 보기</h1>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+    <script>
+        //canvas 요소의 참조값
+        let canvas=document.querySelector("#myCanvas");
+        //canvas에 그림을 그릴 수 있는 도구의 참조값 얻어오기
+        let context=canvas.getContext("2d");
+
+        //canvas에 그릴 이미지 로딩하기
+        let snipeImg=new Image();
+        snipeImg.src="images/snipe.png";
+
+        //이미지 로딩이 완료 되었을때 호출되는 함수
+        snipeImg.onload=function(){
+        // .drawImage(이미지,x,y,width,height)
+        context.drawImage(snipeImg,0,0,100,100);
+        };
+                
+    </script>
+</body>
+</html>
