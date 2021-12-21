@@ -9,32 +9,36 @@
 <body>
     <button id="startBtn">Start</button>
     <button id="stopBtn">Stop</button>
+    <button id="resetBtn">Reset</button>
     <p id="info">0</p>
     <script>
         /*
             start버튼을 누르면 p요소에 출력된 숫자가 1초마다
             1씩 증가하도록 프로그래밍 해 보세요.
         */
-
+        /*
+            Stop버튼을 누르면 증가하던 숫자가 멈추도록 해보세요.
+        */
+        /*
+            Reset버튼을 누르면 다시 0부터 시작되게 해보세요.
+        */
+        
         // 인터벌럴이 시작 되었는지 여부를 관리할 변수
         let isRun=false; //초기값도 생각해야 한다. 처음 시작시 interval이 시작되지 않기때문에
         let intervalID;
         
-        let i=0;
+        let count=0;
         document.querySelector("#startBtn").addEventListener("click",function(){
             if(isRun){
                 return;
             }
             intervalID=setInterval(function(){
-                            i=i+1;
-                            document.querySelector("#info").innerText=i;
+                            count=count+1;
+                            document.querySelector("#info").innerText=count;
                         },1000);
                 isRun=true;
         });
-   
-        document.querySelector("#stopBtn").addEventListener("click",function(){
-            clearInterval(intervalID);
-        });
+
         /* 다른 방법
         document.querySelector("#stintervalIDrtBtn").addEventListener("click",function(){
             setInterval(function(){
@@ -43,6 +47,18 @@
             },1000);
         });
         */
+
+        document.querySelector("#stopBtn").addEventListener("click",function(){
+            clearInterval(intervalID);
+        });
+        
+        document.querySelector("#resetBtn").addEventListener("click",function(){
+            isRun=false;
+            count=0;
+            document.querySelector("#info").innerText=0;
+        });
+
+
     </script>
 </body>
 </html>
