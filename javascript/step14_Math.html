@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>step14_Math.html</title>
+</head>
+<body>
+    <h1>수학에 관련된 Math object 사용해 보기</h1>
+    <script>
+        //원주율
+        let pi=Math.PI;
+
+        //반올림
+        let result1=Math.round(10.5);
+        //올림
+        let result2=Math.floor(10.2);
+        //내림
+        let result3=Math.ceil(10.7);
+
+        //0이상 1미만의 랜덤한 실수 얻어내기
+        let ranNum=Math.random();
+
+        //0이상 10 미만의 랜덤한 실수 얻어내기
+        let ranNum2=Math.random()*10;
+
+        //0이상 9이하의 랜덤한 정수 얻어내기
+        let ranNum3=Math.floor(Math.random()*10);
+
+        //0이상 44 이하의 랜덤한 정수 얻어내기
+        let ranNum4=Math.floor(Math.random()*45);
+
+        //1이상 45 이하의 랜덤한 정수 얻어내기
+        let ranNum5=Math.floor(Math.random()*45)+1;
+
+        //-20이상 20이하의 랜덤한 정수 얻어내기
+        let random6=Math.floor(Math.random()*41)-20;
+    </script>
+</body>
+</html>
