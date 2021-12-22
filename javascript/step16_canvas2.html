@@ -19,50 +19,44 @@
         let canvas=document.querySelector("#myCanvas");
         //canvas에 그림을 그릴 수 있는 도구의 참조값 얻어오기
         let context=canvas.getContext("2d");
-
         //canvas에 그릴 이미지 로딩하기
         let snipeImg=new Image();
         snipeImg.src="images/snipe.png";
-
-        let shotimg=new Image();
-        shotimg.src="images/hole.png";
+        let holeImg=new Image();
+        holeImg.src="images/hole.png";
 
         let snipeX=0;
         let snipeY=0;
-        let point={};
-        let array=[];
-
-
-
+        let holes=[];
         //초당 100번 호출되는 함수를 만들어 놓고
         setInterval(function(){
-            //사각형 영역을 지우기
+            //사각형 영역을 지우기  .clearRect(x,y,width,height)
             context.clearRect(0,0,500,500);
-            //함수 안에서 canvas에 렌더링하는 작업을 한다.
 
-            array.push(point);
-            for(let i=0;i<array.length;i++){
-                array[i]
+            
+            for(let i=0;i<holes.length;i++){
+                let shotX=holes[i].x;
+                let shotY=holes[i].y;
+                context.drawImage(holeImg,shotX,shotY,20,20);
             }
+            //함수 안에서 canvas에 렌더링하는 작업을 한다.
             context.drawImage(snipeImg,snipeX-50,snipeY-50,100,100);
         },10);
-
         canvas.addEventListener("mousemove",function(e){
             //마우스의 좌표를 스나이프의 좌표에 반영한다.
             snipeX=e.offsetX;
             snipeY=e.offsetY;
+        
         });
-
         //canvas에 "mousedown" 이벤트가 일어 났을때 총소리를 재생해 보세요.
         let firesound=new Audio("sounds/fire.wav");
-
         canvas.addEventListener("mousedown",function(){
             //연속으로 재생 가능하게 하기 위해 재생 위치를 강제로 돌려 놓고
             firesound.currentTime=0;
             //재생하기
             firesound.play();
-            context.drawImage(shotimg,snipeX-25,snipeY-25,50,50);
-            point={x:snipeX-25,y:snipeY-25};
+            shotpoint={x:snipeX-10,y:snipeY-10};
+            holes.push(shotpoint);
         });
 
 
