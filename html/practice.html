@@ -10,23 +10,19 @@
 </style>
 </head>
 <body>
-    <h1>회원 가입 폼 입니다.</h1>
-    <form action="">
-        <label for="email">이메일</label>
-        <input type="text" id="email" name="imail"><br>
-        <fieldset>
-            <legend>성별 정보 선택</legend>
-            <label>
-                <input type="radio" name="gender" value="man" checked> 남자
-            </label>
-            <label>
-                <input type="radio" name="gender" value="woman"> 여자
-            </label>
-        </fieldset>
-        <fieldset>
-            <legend>취미 정보 선택</legend>
-            <label></label>
-        </fieldset>
-    </form>
+<form action="insert.jsp">
+    <h1>html5 에서 추가된 form 요소</h1>
+    <label for="color">색상선택</label> 
+    <input type="color" id="color" name="color"><br>
+    <label for="range">범위</label>
+    <input type="range" id="range" name="range" min="10" max="100" step="1" value="10"><br>
+    <label for="date">날짜</label>
+    <input type="date" id="date" name="date"><br>
+    <label for="time">시간</label>
+    <input type="time" name="time" id="time"><br>
+    <label for="number">숫자</label>
+    <input type="number" id="number" name="number" min="0" max="100" step="10"><br>
+    <button type="submit">저장</button>
+</form>
 </body>
 </html>
